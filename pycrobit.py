@@ -2,7 +2,7 @@
 Recycle microbits exercises in python using 5 * 5 strings and some coloring.
 """
 
-__all__ = ["Pycrobit", "DEFAULT_COLOR_MAP"]
+__all__ = ["Pycrobit", "DEFAULT_COLOR_MAP", "Fore"]
 
 import os
 import time
