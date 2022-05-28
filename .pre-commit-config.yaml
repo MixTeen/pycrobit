@@ -36,3 +36,12 @@ repos:
     rev: v1.20.1
     hooks:
       - id: setup-cfg-fmt
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: ["-rn", "-sn", "--fail-on=I"]
+        exclude: "setup.py"
