@@ -1,7 +1,6 @@
 import pytest
-from colorama import Fore
 
-from pycrobit import validate_color_map
+from pycrobit import Fore, validate_color_map
 
 
 def test_colormap():

@@ -1,6 +1,6 @@
 # pycrobit
 
-[![Coverage Status](https://coveralls.io/repos/github/mixteen/pycrobit/badge.svg?branch=main)](https://coveralls.io/github/Pierre-Sassoulas/centralized-pre-commit-conf?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/mixteen/pycrobit/badge.svg?branch=main)](https://coveralls.io/github/mixteen/pycrobit?branch=main)
 [![PyPI version](https://badge.fury.io/py/pycrobit.svg)](https://badge.fury.io/py/pycrobit)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
@@ -23,8 +23,7 @@ Or download ``pycrobit.py`` for offline use.
 ## Example of use
 
 ```python
-from pycrobit import Pycrobit
-from colorama import Fore
+from pycrobit import Fore, Pycrobit
 
 all_lit = """
 *****
@@ -54,7 +53,3 @@ while True:
     pycrobit.display("\n".join(".***." * 5))
     pycrobit.wait(-0.25)
 ```
-
-# TODO
-
-Version without using colorama for when you can't install colorama easily.

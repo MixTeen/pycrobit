@@ -1,8 +1,7 @@
 """Basic tests for pycrobit."""
 import pytest
-from colorama import Fore
 
-from pycrobit import Pycrobit
+from pycrobit import Fore, Pycrobit
 
 
 def test_todo(lit, capsys):
@@ -13,6 +12,6 @@ def test_todo(lit, capsys):
     pycrobit.display(lit, {"*": Fore.GREEN})
     out, err = capsys.readouterr()
     assert not err
-    assert "[33m*\x1b[39m\n" in out
+    assert "[33m*\x1b[" in out
     with pytest.raises(ValueError, match="asked to wait for a negative time"):
         pycrobit.wait(-1.0)
