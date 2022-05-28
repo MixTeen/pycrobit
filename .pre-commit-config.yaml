@@ -9,8 +9,17 @@ repos:
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: name-tests-test
-      - id: requirements-txt-fixer
       - id: trailing-whitespace
+  - repo: https://github.com/myint/autoflake
+    rev: v1.4
+    hooks:
+      - id: autoflake
+        args:
+          - --in-place
+          - --remove-all-unused-imports
+          - --expand-star-imports
+          - --remove-duplicate-keys
+          - --remove-unused-variables
   - repo: 'https://github.com/pycqa/isort'
     rev: 5.10.1
     hooks:
@@ -43,5 +52,5 @@ repos:
         entry: pylint
         language: system
         types: [python]
-        args: ["-rn", "-sn", "--fail-on=I"]
+        args: ["-rn", "-sn", "--fail-on=I", "--disable=C0111"]
         exclude: "setup.py"

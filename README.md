@@ -19,3 +19,42 @@ pip install pycrobit
 ```
 
 Or download ``pycrobit.py`` for offline use.
+
+## Example of use
+
+```python
+from pycrobit import Pycrobit
+from colorama import Fore
+
+all_lit = """
+*****
+*****
+*****
+*****
+*****
+"""
+all_off = """
+.....
+.....
+.....
+.....
+....."""
+
+
+pycrobit = Pycrobit(framerate=0.50)
+while True:
+    pycrobit.display(all_lit)  # Lit red by default
+    pycrobit.display(all_off)
+    pycrobit.display(all_lit, {"*": Fore.YELLOW})
+    pycrobit.display(all_off)
+    pycrobit.display(all_lit, {"*": Fore.GREEN})
+    pycrobit.display(all_off)
+    pycrobit.display("*.*.*\n" * 5)
+    pycrobit.wait(-0.25)
+    pycrobit.display("\n".join(".***." * 5))
+    pycrobit.wait(-0.25)
+```
+
+# TODO
+
+Version without using colorama for when you can't install colorama easily.
