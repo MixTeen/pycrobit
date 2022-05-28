@@ -15,7 +15,7 @@ There's a lot of fun exercises for children using microbits but a lot less using
 ## Installation
 
 ```bash
-pip install pycrobit
+pip install pycrobit[colorama]
 ```
 
 Or download ``pycrobit.py`` for offline use.
