@@ -10,7 +10,7 @@ strings and some coloring without the hassle of handling terminal coloring and r
 
 ## Context
 
-There's a lot of fun exercises for children using microbits but a lot less using python.
+[We have a lot of fun exercises for children using microbits](https://github.com/MixTeen/microbit-exercices) but a lot less using python.
 
 ## Installation
 
@@ -49,7 +49,7 @@ while True:
     pycrobit.display(all_lit, {"*": Fore.GREEN})
     pycrobit.display(all_off)
     pycrobit.display("*.*.*\n" * 5)
-    pycrobit.wait(-0.25)
+    pycrobit.wait(-0.25)  # Previous display will be shown 0.5 - 0.25s = 0.25s
     pycrobit.display(".***." * 5)
-    pycrobit.wait(-0.25)
+    pycrobit.wait(0.25)  # Previous display will be shown 0.5 + 0.25s = 0.75s
 ```
