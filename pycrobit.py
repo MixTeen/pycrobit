@@ -32,9 +32,16 @@ DEFAULT_COLOR_MAP = {".": "", "*": Fore.RED}
 ColorMap = Dict[str, str]
 
 
-def validate_pycrobit_str(pycrobit_string: str) -> None:
+def validate_pycrobit_str(pycrobit_string: str) -> str:
     """Validate that the pycrobit string is correct."""
     strip_line_feed = pycrobit_string.strip("\n ")
+    if len(strip_line_feed) == 25:
+        result = ""
+        for i, char in enumerate(strip_line_feed):
+            result += char
+            if i % 5 == 4:
+                result += "\n"
+        return result
     lines = strip_line_feed.split("\n")
     assert len(lines) == 5, f"We expected 5 lines in the string and got {lines} "
     for i, line in enumerate(lines):
@@ -44,6 +51,7 @@ def validate_pycrobit_str(pycrobit_string: str) -> None:
                 f"We expected 5 characters on line n°{i+1} and got "
                 f"{len(stripped_line)} ({stripped_line})"
             )
+    return pycrobit_string
 
 
 def validate_color_map(color_map: ColorMap) -> None:
@@ -61,9 +69,9 @@ def clear_terminal() -> None:
 
 def colorize(pycrobit_string: str, color_map: ColorMap) -> str:
     """Colorize a string to be displayed in terminal."""
-    validate_pycrobit_str(pycrobit_string)
+    validated_str = validate_pycrobit_str(pycrobit_string)
     validate_color_map(color_map)
-    return "".join(f"{color_map.get(px, '')}{px}{Fore.RESET}" for px in pycrobit_string)
+    return "".join(f"{color_map.get(px, '')}{px}{Fore.RESET}" for px in validated_str)
 
 
 class Pycrobit:

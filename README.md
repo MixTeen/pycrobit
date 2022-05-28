@@ -50,6 +50,6 @@ while True:
     pycrobit.display(all_off)
     pycrobit.display("*.*.*\n" * 5)
     pycrobit.wait(-0.25)
-    pycrobit.display("\n".join(".***." * 5))
+    pycrobit.display(".***." * 5)
     pycrobit.wait(-0.25)
 ```
