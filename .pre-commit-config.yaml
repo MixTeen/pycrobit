@@ -39,7 +39,7 @@ repos:
           - flake8-black>=0.1.1
         language_version: python3
   - repo: 'https://github.com/asottile/pyupgrade'
-    rev: v3.2.0
+    rev: v3.2.2
     hooks:
       - id: pyupgrade
         args:
