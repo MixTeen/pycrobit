@@ -64,7 +64,7 @@ def validate_color_map(color_map: ColorMap) -> None:
 
 def clear_terminal() -> None:
     """Clear the terminal (refresh the screen)."""
-    os.system("cls" if os.name == "nt" else "clear")
+    os.system("cls" if os.name == "nt" else "clear") # pylint: disable=no-member
 
 
 def colorize(pycrobit_string: str, color_map: ColorMap) -> str:
