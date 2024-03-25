@@ -75,7 +75,6 @@ def colorize(pycrobit_string: str, color_map: ColorMap) -> str:
 
 
 class Pycrobit:
-
     """A context manager that act similarly as a microbit but in Python."""
 
     DEFAULT_FRAMERATE_SECOND = 1.0
