@@ -1,4 +1,5 @@
 """Basic tests for pycrobit."""
+
 import pytest
 
 from pycrobit import Fore, Pycrobit
