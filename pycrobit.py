@@ -48,7 +48,7 @@ def validate_pycrobit_str(pycrobit_string: str) -> str:
         stripped_line = line.strip(" ")
         if len(stripped_line) != 5:
             raise ValueError(
-                f"We expected 5 characters on line n°{i+1} and got "
+                f"We expected 5 characters on line n°{i + 1} and got "
                 f"{len(stripped_line)} ({stripped_line})"
             )
     return pycrobit_string
