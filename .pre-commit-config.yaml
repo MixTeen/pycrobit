@@ -14,7 +14,7 @@ repos:
       - id: name-tests-test
       - id: trailing-whitespace
   - repo: https://github.com/PyCQA/autoflake
-    rev: v2.3.3
+    rev: v2.4.0
     hooks:
       - id: autoflake
         args:
@@ -24,11 +24,11 @@ repos:
           - --remove-duplicate-keys
           - --remove-unused-variables
   - repo: 'https://github.com/pycqa/isort'
-    rev: 9.0.0a3
+    rev: 9.0.1
     hooks:
       - id: isort
   - repo: 'https://github.com/ambv/black'
-    rev: 26.3.1
+    rev: 26.5.1
     hooks:
       - id: black
   - repo: 'https://github.com/PyCQA/flake8'
